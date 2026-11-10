@@ -41,7 +41,7 @@ Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi �
 
 ## 5. Kết quả YOLO
 
-- Runtime, GPU/CPU, phiên bản Ultralytics và Torch: Tesla T4; Ultralytics 8.4.208; PyTorch 2.14.1+cu130
+- Runtime, GPU/CPU, phiên bản Ultralytics và Torch: runtime 26.2ms; Tesla T4; Ultralytics 8.4.208; PyTorch 2.14.1+cu130
 - Các tham số thay đổi so với notebook nếu có và lý do:
 - Đường dẫn best checkpoint trong phiên chạy:
 
