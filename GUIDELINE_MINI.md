@@ -13,15 +13,15 @@
 
 ## Quy tắc chung
 
-- Box bám sát vật thể nghĩa là: Bounding box phải ôm khít các mép ngoài cùng của phần thân xe thực tế nhìn thấy được; không lấy thừa mặt đường, vỉa hè, bầu trời hay lấn sang xe bên cạnh; không lấy hàng hóa chở trên xe.
-- Vật thể bị che khuất: Nếu vật thể bị che quá 80% thì bỏ qua, nếu không vẽ box bao quanh toàn bộ phần diện tích nhìn thấy được của xe miễn là đủ đặc trưng nhận diện đúng lớp. Phần bị cắt thì vẽ ước lượng và không cắt quá nhiều vào xe bên cạnh (nếu có).
-- Vật thể bị cắt bởi rìa ảnh: Cạnh của box chạm đúng mép biên ảnh tại vị trí bị cắt. Vật thể bị cắt quá 80% thì bỏ qua.
+- Box bám sát vật thể nghĩa là: box ôm khít các mép ngoài cùng của phần thân xe thực tế nhìn thấy được; không lấy thừa mặt đường, vỉa hè, bầu trời hay lấn sang xe bên cạnh; không lấy hàng hóa chở trên xe.
+- Vật thể bị che khuất: Vật thể bị che một phần vẫn gán box quanh phần nhìn thấy được nếu nhận diện được lớp.
+- Vật thể bị cắt bởi rìa ảnh: Cạnh của box chạm đúng mép biên ảnh tại vị trí bị cắt.
 - Vật thể rất nhỏ/mơ hồ: Nếu vật thể quá nhỏ hoặc quá mờ ở xa không  có đặc trưng nhận diện thì bỏ qua.
 
 ## Ghi lại quyết định cho ít nhất ba ca mơ hồ
 
 | Ảnh | Tình huống | Quyết định cuối | Lý do theo schema |
 | --- | --- | --- | --- |
-| `drive_040` | vật thể ở xa và bị che khuất, bị mờ, không rõ hình ảnh | bỏ qua | không nhìn rõ vật thể |
-| `drive_...` | | | |
+| `drive_040` | vật thể ở xa và bị che khuất, bị mờ, không rõ hình ảnh | bỏ qua | không nhận diện được vật thể |
+| `drive_005` | quá nhiều vật thể chèn hình nên nhau| bỏ qua | không nhận diện được vật thể |
 | `drive_...` | | | |
