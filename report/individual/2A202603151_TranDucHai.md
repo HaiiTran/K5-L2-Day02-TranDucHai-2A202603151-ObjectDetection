@@ -35,7 +35,7 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
 | Recall | 0.6922 | 0.6937 |
 | F1 | 0.6108 | 0.6117 |
 | mean_iou_of_matches | 0.8602 | 0.8603 |
-| passed | | false |
+| passed | false | false |
 
 Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
 
